@@ -13,7 +13,7 @@ import {
 import { Toaster } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
-import aboutImg from "@/assets/about.jpg";
+
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -171,20 +171,8 @@ function Home() {
 
       {/* ABOUT */}
       <section id="about" className="bg-background py-32">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-12">
-          <div className="relative">
-            <img
-              src={aboutImg}
-              alt="Beauty Nails Αργυρούπολη χώρος"
-              width={1200}
-              height={1400}
-              loading="lazy"
-              className="aspect-[4/5] w-full object-cover shadow-luxe"
-            />
-            <div className="absolute -bottom-8 -right-8 hidden h-40 w-40 border border-rose-gold/40 bg-blush/40 backdrop-blur lg:flex items-center justify-center text-center p-4">
-              <Logo className="h-24 w-24" />
-            </div>
-          </div>
+        <div className="mx-auto max-w-3xl px-6 lg:px-12">
+
           <div>
             <span className="divider-gold">Ποιοι Είμαστε</span>
             <h2 className="mt-6 text-4xl leading-tight sm:text-5xl lg:text-6xl">
@@ -232,7 +220,7 @@ function Home() {
                 </div>
               </div>
               <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Βασισμένο σε 217 αξιολογήσεις
+                από 217 αξιολογήσεις
               </div>
             </div>
           </div>
