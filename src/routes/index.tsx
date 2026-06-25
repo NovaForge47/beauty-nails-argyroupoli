@@ -389,11 +389,11 @@ function Home() {
             </div>
 
             <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:flex-row md:gap-8">
-              <a href="tel:+302101234567" className="flex items-center gap-2 hover:text-rose-gold">
-                <Phone className="h-4 w-4" strokeWidth={1.5} /> +30 210 123 4567
+              <a href="tel:+302110123079" className="flex items-center gap-2 hover:text-rose-gold">
+                <Phone className="h-4 w-4" strokeWidth={1.5} /> 21 1012 3079
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/beauty__nail__salon__/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
