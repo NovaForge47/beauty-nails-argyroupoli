@@ -357,6 +357,22 @@ function Home() {
                 </div>
               </a>
               <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <span className="mt-1 flex h-5 w-5 items-center justify-center text-[#25D366]">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">WhatsApp</div>
+                  <div className="mt-1 text-lg text-foreground group-hover:text-[#25D366] transition-colors">
+                    {PHONE_DISPLAY}
+                  </div>
+                </div>
+              </a>
+              <a
                 href="https://www.instagram.com/beauty__nail__salon__/"
                 target="_blank"
                 rel="noopener noreferrer"
