@@ -212,7 +212,7 @@ function Home() {
             {services.map((s, i) => (
               <div
                 key={s.name}
-                className="group relative bg-card p-10 transition-all duration-500 hover:bg-blush/40"
+                className="group relative bg-rose-gold-light/30 p-10 transition-all duration-500 hover:bg-rose-gold-light/50"
               >
                 <div className="mb-8 text-xs uppercase tracking-[0.3em] text-rose-gold">
                   {String(i + 1).padStart(2, "0")}
