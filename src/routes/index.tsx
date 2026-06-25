@@ -12,6 +12,19 @@ import {
 } from "lucide-react";
 import { Toaster } from "sonner";
 
+const WHATSAPP_NUMBER = "306944295235";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Γεια σας! Θα ήθελα πληροφορίες για ραντεβού.")}`;
+const PHONE_TEL = "+306944295235";
+const PHONE_DISPLAY = "+30 694 4295235";
+
+function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.687.244-1.045 0-.058 0-.143-.03-.187-.1-.143-2.135-1.06-2.464-1.06m-3.16 7.508h-.014c-1.49 0-2.95-.402-4.24-1.146l-.302-.187-3.158.83.844-3.07-.2-.328c-.83-1.318-1.275-2.835-1.275-4.4 0-4.523 3.715-8.226 8.24-8.226 4.526 0 8.214 3.717 8.214 8.24 0 4.524-3.703 8.286-8.226 8.286M16 4C9.376 4 4 9.376 4 16c0 2.106.546 4.166 1.59 5.998L4 28l6.2-1.62A11.95 11.95 0 0 0 16 28c6.624 0 12-5.376 12-12S22.624 4 16 4"/>
+    </svg>
+  );
+}
+
 import heroBg from "@/assets/hero-bg.jpg";
 
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
@@ -111,7 +124,23 @@ function Home() {
               Επαγγελματική φροντίδα νυχιών και αισθητικής με αγάπη και μεράκι.
               Στην καρδιά της Αργυρούπολης, ένας χώρος αφιερωμένος στην ομορφιά και την περιποίηση.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-medium text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1ebe57]"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Επικοινωνήστε μαζί μας
+              </a>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center gap-3 rounded-full border border-rose-gold/60 px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-rose-gold hover:text-primary-foreground"
+              >
+                <Phone className="h-4 w-4" strokeWidth={1.5} />
+                {PHONE_DISPLAY}
+              </a>
               <a href="#services" className="text-xs uppercase tracking-[0.3em] text-foreground story-link">
                 Δείτε τις υπηρεσίες
               </a>
@@ -199,6 +228,37 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT CTA (where booking form used to be) */}
+      <section className="relative overflow-hidden bg-blush/40 py-28">
+        <div className="mx-auto max-w-4xl px-6 text-center lg:px-12">
+          <span className="divider-gold">Κλείστε ραντεβού</span>
+          <h2 className="mx-auto mt-6 max-w-2xl text-4xl leading-tight sm:text-5xl">
+            Έτοιμες για το επόμενο <span className="italic text-gradient-gold">ραντεβού σας</span>;
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+            Επικοινωνήστε μαζί μας απευθείας μέσω WhatsApp ή τηλεφωνικά και θα σας εξυπηρετήσουμε άμεσα.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-base font-medium text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1ebe57]"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              Επικοινωνήστε μαζί μας
+            </a>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center gap-3 rounded-full border border-rose-gold/60 bg-background px-8 py-4 text-base font-medium text-foreground transition-colors hover:bg-rose-gold hover:text-primary-foreground"
+            >
+              <Phone className="h-4 w-4" strokeWidth={1.5} />
+              Καλέστε {PHONE_DISPLAY}
+            </a>
           </div>
         </div>
       </section>
@@ -297,6 +357,22 @@ function Home() {
                 </div>
               </a>
               <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <span className="mt-1 flex h-5 w-5 items-center justify-center text-[#25D366]">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">WhatsApp</div>
+                  <div className="mt-1 text-lg text-foreground group-hover:text-[#25D366] transition-colors">
+                    {PHONE_DISPLAY}
+                  </div>
+                </div>
+              </a>
+              <a
                 href="https://www.instagram.com/beauty__nail__salon__/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -382,6 +458,18 @@ function Home() {
           </div>
         </div>
       </footer>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Επικοινωνήστε μαζί μας στο WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-4 text-white shadow-2xl transition-transform hover:scale-110 hover:bg-[#1ebe57]"
+      >
+        <WhatsAppIcon className="h-6 w-6" />
+        <span className="hidden text-sm font-medium sm:inline">Επικοινωνήστε μαζί μας</span>
+      </a>
     </div>
   );
 }
