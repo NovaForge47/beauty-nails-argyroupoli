@@ -32,12 +32,19 @@ import space1 from "@/assets/space-1.jpg.asset.json";
 import space2 from "@/assets/space-2.png.asset.json";
 import space3 from "@/assets/space-3.jpg.asset.json";
 import space4 from "@/assets/space-4.png.asset.json";
+import work1 from "@/assets/work-1.jpg.asset.json";
+import work2 from "@/assets/work-2.jpg.asset.json";
+import work3 from "@/assets/work-3.jpg.asset.json";
+import work4 from "@/assets/work-4.jpg.asset.json";
+import work5 from "@/assets/work-5.jpg.asset.json";
+import work6 from "@/assets/work-6.jpg.asset.json";
 
 const spacePhotos = [
   { src: space4.url, alt: "Σταθμοί μανικιούρ Beauty Nails" },
   { src: space2.url, alt: "Χώρος pedicure Beauty Nails" },
   { src: space1.url, alt: "Καθίσματα pedicure" },
   { src: space3.url, alt: "Χώρος αναμονής & pedicure" },
+
 ];
 
 export const Route = createFileRoute("/")({
