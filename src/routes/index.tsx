@@ -259,7 +259,6 @@ function Home() {
       <section className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-20 text-center">
-            <span className="divider-gold">Μαρτυρίες</span>
             <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
               Οι πελάτισσες <span className="italic text-gradient-gold">μιλούν</span>
             </h2>
