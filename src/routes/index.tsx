@@ -14,12 +14,6 @@ import { Toaster } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutImg from "@/assets/about.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -59,7 +53,7 @@ const testimonials = [
   },
 ];
 
-const galleryImages = [g1, g2, g3, g4, g5, g6];
+
 
 function Logo({ className = "h-10 w-10" }: { className?: string }) {
   return (
