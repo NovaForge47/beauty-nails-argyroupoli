@@ -325,25 +325,27 @@ function Home() {
 
           <div>
             <span className="divider-gold">Επικοινωνία</span>
-            <h2 className="mt-6 text-4xl sm:text-5xl">
-              Θα σας περιμένουμε <span className="italic text-gradient-gold">με χαμόγελο</span>
-            </h2>
             <div className="mt-10 space-y-6">
-              <a href="tel:+302101234567" className="flex items-start gap-4 group">
+              <a href="tel:+302110123079" className="flex items-start gap-4 group">
                 <Phone className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Τηλέφωνο</div>
                   <div className="mt-1 text-lg text-foreground group-hover:text-rose-gold transition-colors">
-                    +30 210 123 4567
+                    21 1012 3079
                   </div>
                 </div>
               </a>
-              <a href="mailto:hello@beautynails.gr" className="flex items-start gap-4 group">
-                <Mail className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
+              <a
+                href="https://www.instagram.com/beauty__nail__salon__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <Instagram className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Instagram</div>
                   <div className="mt-1 text-lg text-foreground group-hover:text-rose-gold transition-colors">
-                    hello@beautynails.gr
+                    @beauty__nail__salon__
                   </div>
                 </div>
               </a>
@@ -352,7 +354,7 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Διεύθυνση</div>
                   <div className="mt-1 text-lg text-foreground">
-                    Αργυρούπολη<br />Αθήνα
+                    Beauty Nail Salon<br />Λεωφ. Κύπρου 58, Αργυρούπολη 164 51
                   </div>
                 </div>
               </div>
@@ -361,7 +363,7 @@ function Home() {
             <div className="mt-10 aspect-[16/10] w-full overflow-hidden border border-border shadow-soft">
               <iframe
                 title="Beauty Nails Αργυρούπολη location"
-                src="https://www.google.com/maps?q=Argyroupoli,+Athens,+Greece&output=embed"
+                src="https://www.google.com/maps?q=Beauty+Nail+Salon,+Leof.+Kiprou+58,+Argiroupoli+164+51&output=embed"
                 className="h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
