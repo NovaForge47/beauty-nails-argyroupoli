@@ -32,13 +32,30 @@ import space1 from "@/assets/space-1.jpg.asset.json";
 import space2 from "@/assets/space-2.png.asset.json";
 import space3 from "@/assets/space-3.jpg.asset.json";
 import space4 from "@/assets/space-4.png.asset.json";
+import work1 from "@/assets/work-1.jpg.asset.json";
+import work2 from "@/assets/work-2.jpg.asset.json";
+import work3 from "@/assets/work-3.jpg.asset.json";
+import work4 from "@/assets/work-4.jpg.asset.json";
+import work5 from "@/assets/work-5.jpg.asset.json";
+import work6 from "@/assets/work-6.jpg.asset.json";
 
 const spacePhotos = [
   { src: space4.url, alt: "Σταθμοί μανικιούρ Beauty Nails" },
   { src: space2.url, alt: "Χώρος pedicure Beauty Nails" },
   { src: space1.url, alt: "Καθίσματα pedicure" },
   { src: space3.url, alt: "Χώρος αναμονής & pedicure" },
+
 ];
+
+const workPhotos = [
+  { src: work1.url, alt: "Γαλλικό μανικιούρ με μπλε floral design" },
+  { src: work2.url, alt: "Γαλλικό μανικιούρ με μαύρη λεπτομέρεια" },
+  { src: work3.url, alt: "Γαλλικό μανικιούρ σε πορτοκαλί απόχρωση" },
+  { src: work4.url, alt: "Πολύχρωμο nail art με σχέδια" },
+  { src: work5.url, alt: "Stiletto nails σε nude απόχρωση" },
+  { src: work6.url, alt: "Γαλλικό κίτρινο με 3D floral nail art" },
+];
+
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -232,6 +249,32 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* OUR WORK */}
+      <section id="work" className="bg-background py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mb-16 text-center">
+            <span className="divider-gold">Portfolio</span>
+            <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
+              Οι <span className="italic text-gradient-gold">δουλειές</span> μας
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {workPhotos.map((p) => (
+              <div key={p.src} className="overflow-hidden rounded-sm shadow-soft">
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  className="h-80 w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* ABOUT */}
       <section id="about" className="bg-background py-32">
