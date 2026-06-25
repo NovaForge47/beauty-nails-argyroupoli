@@ -5,7 +5,6 @@ import {
   Award,
   Star,
   Phone,
-  Mail,
   MapPin,
   Clock,
   Instagram,
