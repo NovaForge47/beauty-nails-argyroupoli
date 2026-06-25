@@ -14,8 +14,8 @@ import { Toaster } from "sonner";
 
 const WHATSAPP_NUMBER = "306944295235";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Γεια σας! Θα ήθελα πληροφορίες για ραντεβού.")}`;
-const PHONE_TEL = "+306944295235";
-const PHONE_DISPLAY = "+30 694 4295235";
+const PHONE_TEL = "+302110123079";
+const PHONE_DISPLAY = "21 1012 3079";
 
 function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
