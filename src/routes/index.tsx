@@ -228,7 +228,7 @@ function Home() {
           <div>
             <span className="divider-gold">Ποιοι Είμαστε</span>
             <h2 className="mt-6 text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              Μια μικρή <span className="italic text-gradient-gold">πολυτέλεια</span> που αξίζετε
+              Ποιοι <span className="italic text-gradient-gold">είμαστε</span>
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
               Στο Beauty Nail Salon Αργυρούπολη πιστεύουμε ότι η περιποίηση είναι μια μικρή
