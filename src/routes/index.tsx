@@ -458,6 +458,18 @@ function Home() {
           </div>
         </div>
       </footer>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Επικοινωνήστε μαζί μας στο WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-4 text-white shadow-2xl transition-transform hover:scale-110 hover:bg-[#1ebe57]"
+      >
+        <WhatsAppIcon className="h-6 w-6" />
+        <span className="hidden text-sm font-medium sm:inline">Επικοινωνήστε μαζί μας</span>
+      </a>
     </div>
   );
 }
