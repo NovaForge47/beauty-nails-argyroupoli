@@ -250,6 +250,32 @@ function Home() {
         </div>
       </section>
 
+      {/* OUR WORK */}
+      <section id="work" className="bg-background py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mb-16 text-center">
+            <span className="divider-gold">Portfolio</span>
+            <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
+              Οι <span className="italic text-gradient-gold">δουλειές</span> μας
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {workPhotos.map((p) => (
+              <div key={p.src} className="overflow-hidden rounded-sm shadow-soft">
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  className="h-80 w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       {/* ABOUT */}
       <section id="about" className="bg-background py-32">
         <div className="mx-auto max-w-3xl px-6 lg:px-12">
