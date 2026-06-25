@@ -80,8 +80,8 @@ function Home() {
       {/* NAV */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-          <a href="#top" className="flex items-center gap-3">
-            <Logo className="h-11 w-11" />
+          <a href="#top" className="flex items-center gap-4">
+            <Logo className="h-16 w-16" />
             <div className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-wide text-foreground">Beauty</span>
               <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
