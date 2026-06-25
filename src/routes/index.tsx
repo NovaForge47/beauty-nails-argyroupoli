@@ -82,7 +82,7 @@ function Home() {
           </a>
           <nav className="hidden items-center gap-10 text-sm tracking-[0.18em] uppercase text-muted-foreground lg:flex">
             <a href="#services" className="transition-colors hover:text-rose-gold">Υπηρεσίες</a>
-            <a href="#gallery" className="transition-colors hover:text-rose-gold">Gallery</a>
+            
             <a href="#about" className="transition-colors hover:text-rose-gold">Για Εμάς</a>
             <a href="#contact" className="transition-colors hover:text-rose-gold">Επικοινωνία</a>
           </nav>
