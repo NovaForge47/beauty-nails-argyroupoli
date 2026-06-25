@@ -14,12 +14,6 @@ import { Toaster } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutImg from "@/assets/about.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -43,23 +37,23 @@ const services = [
 
 const testimonials = [
   {
-    name: "Μαρία Παπαδοπούλου",
-    initials: "ΜΠ",
-    text: "Το πιο όμορφο νυχοκομείο στην Αργυρούπολη. Επαγγελματισμός, καθαριότητα και αποτέλεσμα που κρατάει εβδομάδες!",
+    name: "Anastasia Roumpou",
+    initials: "AR",
+    text: "The best salon in Athens, keep it up! So proud of you keep going, the energy in there is so hyped and the nail tech is really sweet. My experience there was the best, thank you! I suggest. 🩷",
   },
   {
-    name: "Ελένη Γεωργίου",
-    initials: "ΕΓ",
-    text: "Κάθε επίσκεψη είναι μια εμπειρία πολυτέλειας. Οι κοπέλες είναι καλλιτέχνιδες, με κατάλαβαν αμέσως.",
+    name: "Michaella",
+    initials: "M",
+    text: "Excellent service and good price for detailed design, I recommend.",
   },
   {
-    name: "Σοφία Δημητρίου",
-    initials: "ΣΔ",
-    text: "Premium υλικά, υπέροχος χώρος και τιμές που αξίζουν την κάθε στιγμή. Η μόνη μου διεύθυνση εδώ και 2 χρόνια.",
+    name: "Sophia",
+    initials: "S",
+    text: "Fantastic job! The nails came out exactly as I wanted. Nina was very kind and helpful. The place is very clean and beautiful and the prices are very good.",
   },
 ];
 
-const galleryImages = [g1, g2, g3, g4, g5, g6];
+
 
 function Logo({ className = "h-10 w-10" }: { className?: string }) {
   return (
@@ -88,7 +82,7 @@ function Home() {
           </a>
           <nav className="hidden items-center gap-10 text-sm tracking-[0.18em] uppercase text-muted-foreground lg:flex">
             <a href="#services" className="transition-colors hover:text-rose-gold">Υπηρεσίες</a>
-            <a href="#gallery" className="transition-colors hover:text-rose-gold">Gallery</a>
+            
             <a href="#about" className="transition-colors hover:text-rose-gold">Για Εμάς</a>
             <a href="#contact" className="transition-colors hover:text-rose-gold">Επικοινωνία</a>
           </nav>
@@ -174,39 +168,6 @@ function Home() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section id="gallery" className="bg-secondary/30 py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-20 text-center">
-            <span className="divider-gold">Gallery</span>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            <div className="col-span-2 row-span-2 overflow-hidden">
-              <img
-                src={galleryImages[1]}
-                alt="Pink silk texture"
-                width={800}
-                height={1000}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-            {[0, 2, 3, 4, 5].map((idx) => (
-              <div key={idx} className="aspect-square overflow-hidden">
-                <img
-                  src={galleryImages[idx]}
-                  alt={`Gallery ${idx + 1}`}
-                  width={800}
-                  height={800}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ABOUT */}
       <section id="about" className="bg-background py-32">
@@ -261,6 +222,19 @@ function Home() {
             <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
               Οι πελάτισσες <span className="italic text-gradient-gold">μιλούν</span>
             </h2>
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-5xl text-rose-gold">4.7</span>
+                <div className="flex gap-1 text-rose-gold">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-current" strokeWidth={0} />
+                  ))}
+                </div>
+              </div>
+              <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Βασισμένο σε 217 αξιολογήσεις
+              </div>
+            </div>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
