@@ -178,16 +178,8 @@ function Home() {
       {/* GALLERY */}
       <section id="gallery" className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-20 flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <span className="divider-gold">Gallery</span>
-              <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
-                Παλέτα <span className="italic text-gradient-gold">πολυτέλειας</span>
-              </h2>
-            </div>
-            <p className="max-w-md text-muted-foreground">
-              Αποχρώσεις, υφές και λεπτομέρειες που γεννούν την αισθητική μας ταυτότητα.
-            </p>
+          <div className="mb-20 text-center">
+            <span className="divider-gold">Gallery</span>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
