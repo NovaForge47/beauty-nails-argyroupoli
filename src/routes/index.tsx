@@ -5,7 +5,6 @@ import {
   Award,
   Star,
   Phone,
-  Mail,
   MapPin,
   Clock,
   Instagram,
@@ -80,8 +79,8 @@ function Home() {
       {/* NAV */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-          <a href="#top" className="flex items-center gap-3">
-            <Logo className="h-11 w-11" />
+          <a href="#top" className="flex items-center gap-4">
+            <Logo className="h-16 w-16" />
             <div className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-wide text-foreground">Beauty</span>
               <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
@@ -178,16 +177,8 @@ function Home() {
       {/* GALLERY */}
       <section id="gallery" className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-20 flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <span className="divider-gold">Gallery</span>
-              <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
-                Παλέτα <span className="italic text-gradient-gold">πολυτέλειας</span>
-              </h2>
-            </div>
-            <p className="max-w-md text-muted-foreground">
-              Αποχρώσεις, υφές και λεπτομέρειες που γεννούν την αισθητική μας ταυτότητα.
-            </p>
+          <div className="mb-20 text-center">
+            <span className="divider-gold">Gallery</span>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
@@ -236,7 +227,7 @@ function Home() {
           <div>
             <span className="divider-gold">Ποιοι Είμαστε</span>
             <h2 className="mt-6 text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              Μια μικρή <span className="italic text-gradient-gold">πολυτέλεια</span> που αξίζετε
+              Ποιοι <span className="italic text-gradient-gold">είμαστε</span>
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
               Στο Beauty Nail Salon Αργυρούπολη πιστεύουμε ότι η περιποίηση είναι μια μικρή
@@ -267,7 +258,6 @@ function Home() {
       <section className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-20 text-center">
-            <span className="divider-gold">Μαρτυρίες</span>
             <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
               Οι πελάτισσες <span className="italic text-gradient-gold">μιλούν</span>
             </h2>
@@ -313,7 +303,11 @@ function Home() {
             </h2>
             <ul className="mt-10 divide-y divide-border border-y border-border">
               {[
-                { d: "Δευτέρα – Παρασκευή", h: "09:00 – 20:00" },
+                { d: "Δευτέρα", h: "09:00 – 20:00" },
+                { d: "Τρίτη", h: "09:00 – 21:00" },
+                { d: "Τετάρτη", h: "09:00 – 21:00" },
+                { d: "Πέμπτη", h: "09:00 – 21:00" },
+                { d: "Παρασκευή", h: "09:00 – 21:00" },
                 { d: "Σάββατο", h: "09:00 – 18:00" },
                 { d: "Κυριακή", h: "Κλειστά" },
               ].map((row) => (
@@ -330,25 +324,27 @@ function Home() {
 
           <div>
             <span className="divider-gold">Επικοινωνία</span>
-            <h2 className="mt-6 text-4xl sm:text-5xl">
-              Θα σας περιμένουμε <span className="italic text-gradient-gold">με χαμόγελο</span>
-            </h2>
             <div className="mt-10 space-y-6">
-              <a href="tel:+302101234567" className="flex items-start gap-4 group">
+              <a href="tel:+302110123079" className="flex items-start gap-4 group">
                 <Phone className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Τηλέφωνο</div>
                   <div className="mt-1 text-lg text-foreground group-hover:text-rose-gold transition-colors">
-                    +30 210 123 4567
+                    21 1012 3079
                   </div>
                 </div>
               </a>
-              <a href="mailto:hello@beautynails.gr" className="flex items-start gap-4 group">
-                <Mail className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
+              <a
+                href="https://www.instagram.com/beauty__nail__salon__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <Instagram className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Instagram</div>
                   <div className="mt-1 text-lg text-foreground group-hover:text-rose-gold transition-colors">
-                    hello@beautynails.gr
+                    @beauty__nail__salon__
                   </div>
                 </div>
               </a>
@@ -357,7 +353,7 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Διεύθυνση</div>
                   <div className="mt-1 text-lg text-foreground">
-                    Αργυρούπολη<br />Αθήνα
+                    Beauty Nail Salon<br />Λεωφ. Κύπρου 58, Αργυρούπολη 164 51
                   </div>
                 </div>
               </div>
@@ -366,7 +362,7 @@ function Home() {
             <div className="mt-10 aspect-[16/10] w-full overflow-hidden border border-border shadow-soft">
               <iframe
                 title="Beauty Nails Αργυρούπολη location"
-                src="https://www.google.com/maps?q=Argyroupoli,+Athens,+Greece&output=embed"
+                src="https://www.google.com/maps?q=Beauty+Nail+Salon,+Leof.+Kiprou+58,+Argiroupoli+164+51&output=embed"
                 className="h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -392,11 +388,11 @@ function Home() {
             </div>
 
             <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:flex-row md:gap-8">
-              <a href="tel:+302101234567" className="flex items-center gap-2 hover:text-rose-gold">
-                <Phone className="h-4 w-4" strokeWidth={1.5} /> +30 210 123 4567
+              <a href="tel:+302110123079" className="flex items-center gap-2 hover:text-rose-gold">
+                <Phone className="h-4 w-4" strokeWidth={1.5} /> 21 1012 3079
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/beauty__nail__salon__/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
