@@ -232,6 +232,37 @@ function Home() {
         </div>
       </section>
 
+      {/* CONTACT CTA (where booking form used to be) */}
+      <section className="relative overflow-hidden bg-blush/40 py-28">
+        <div className="mx-auto max-w-4xl px-6 text-center lg:px-12">
+          <span className="divider-gold">Κλείστε ραντεβού</span>
+          <h2 className="mx-auto mt-6 max-w-2xl text-4xl leading-tight sm:text-5xl">
+            Έτοιμες για το επόμενο <span className="italic text-gradient-gold">ραντεβού σας</span>;
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+            Επικοινωνήστε μαζί μας απευθείας μέσω WhatsApp ή τηλεφωνικά και θα σας εξυπηρετήσουμε άμεσα.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-base font-medium text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1ebe57]"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              Επικοινωνήστε μαζί μας
+            </a>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center gap-3 rounded-full border border-rose-gold/60 bg-background px-8 py-4 text-base font-medium text-foreground transition-colors hover:bg-rose-gold hover:text-primary-foreground"
+            >
+              <Phone className="h-4 w-4" strokeWidth={1.5} />
+              Καλέστε {PHONE_DISPLAY}
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
