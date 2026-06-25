@@ -10,10 +10,7 @@ import {
   Clock,
   Instagram,
   Facebook,
-  Calendar as CalendarIcon,
-  ChevronRight,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Toaster } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
@@ -24,25 +21,32 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
+import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
 const services = [
-  { name: "Manicure", desc: "Κλασικό μανικιούρ με λεπτομερή περιποίηση επωνυχίων.", price: "από 15€" },
-  { name: "Pedicure", desc: "Επαγγελματικό πεντικιούρ με spa φροντίδα.", price: "από 25€" },
-  { name: "Gel Νύχια", desc: "Μακράς διαρκείας με αψεγάδιαστη λάμψη.", price: "από 35€" },
-  { name: "Acrylic", desc: "Τεχνητά νύχια με ανθεκτική κατασκευή.", price: "από 40€" },
-  { name: "Nail Art", desc: "Μοναδικά χειροποίητα σχέδια & κρύσταλλα.", price: "από 10€" },
-  { name: "Ημιμόνιμο", desc: "Βαφή διάρκειας έως 3 εβδομάδες.", price: "από 20€" },
+  { name: "Μανικιούρ", desc: "Περιποίηση και σχηματισμός νυχιών με έμφαση στην υγιεινή, την αισθητική και τη λεπτομέρεια. Επιλέξτε ανάμεσα σε κλασικό ή ημιμόνιμο μανικιούρ για άψογο αποτέλεσμα που διαρκεί." },
+  { name: "Ημιμόνιμο Μανικιούρ", desc: "Ιδανική επιλογή για λαμπερά και περιποιημένα νύχια με μεγάλη διάρκεια. Εφαρμόζεται με επαγγελματικά προϊόντα υψηλής ποιότητας για άριστο αποτέλεσμα χωρίς φθορές." },
+  { name: "Gel Νυχιών", desc: "Ενίσχυση και επιμήκυνση νυχιών με gel για φυσική εμφάνιση και υψηλή αντοχή. Διατίθεται σε μεγάλη ποικιλία σχεδίων, χρωμάτων και τεχνικών." },
+  { name: "Acrygel", desc: "Συνδυάζει τα πλεονεκτήματα του ακρυλικού και του gel, προσφέροντας εξαιρετική αντοχή, άνεση και φυσικό αποτέλεσμα. Ιδανικό για όσες επιθυμούν δυνατά και καλοσχηματισμένα νύχια." },
+  { name: "Συντήρηση Gel & Acrygel", desc: "Ανανέωση και συντήρηση της υπάρχουσας εφαρμογής ώστε τα νύχια να παραμένουν όμορφα, υγιή και καλοσχηματισμένα για μεγαλύτερο χρονικό διάστημα." },
+  { name: "Nail Art", desc: "Μοναδικά σχέδια και δημιουργικές λεπτομέρειες που αναδεικνύουν το προσωπικό σας στυλ. Από minimal γραμμές έως πιο εντυπωσιακές καλλιτεχνικές δημιουργίες." },
+  { name: "Pedicure", desc: "Ολοκληρωμένη περιποίηση ποδιών για υγιή και όμορφα άκρα. Περιλαμβάνει καθαρισμό, διαμόρφωση νυχιών και ενυδάτωση για αίσθηση φρεσκάδας και ευεξίας." },
+  { name: "Ημιμόνιμο Pedicure", desc: "Μακράς διάρκειας χρώμα και άψογη εμφάνιση για τα νύχια των ποδιών. Ιδανική επιλογή για καθημερινότητα, διακοπές και ειδικές περιστάσεις." },
+  { name: "Lash Lift", desc: "Ανόρθωση και καμπύλωση φυσικών βλεφαρίδων που χαρίζει πιο έντονο και ξεκούραστο βλέμμα χωρίς τη χρήση extensions." },
+  { name: "Brow Lamination", desc: "Τεχνική διαμόρφωσης φρυδιών που προσφέρει συμμετρία, όγκο και φυσικό αποτέλεσμα, αναδεικνύοντας τα χαρακτηριστικά του προσώπου." },
+  { name: "Αποτρίχωση Προσώπου", desc: "Γρήγορη και αποτελεσματική απομάκρυνση ανεπιθύμητης τριχοφυΐας με επαγγελματικές μεθόδους που σέβονται την επιδερμίδα." },
+  { name: "Σχηματισμός & Βαφή Φρυδιών", desc: "Εξατομικευμένη διαμόρφωση φρυδιών σύμφωνα με τα χαρακτηριστικά του προσώπου για αρμονικό και καλοσχηματισμένο αποτέλεσμα." },
 ];
 
 const testimonials = [
   {
     name: "Μαρία Παπαδοπούλου",
     initials: "ΜΠ",
-    text: "Το πιο όμορφο νυχοκομείο στην Αθήνα. Επαγγελματισμός, καθαριότητα και αποτέλεσμα που κρατάει εβδομάδες!",
+    text: "Το πιο όμορφο νυχοκομείο στην Αργυρούπολη. Επαγγελματισμός, καθαριότητα και αποτέλεσμα που κρατάει εβδομάδες!",
   },
   {
     name: "Ελένη Γεωργίου",
@@ -58,6 +62,16 @@ const testimonials = [
 
 const galleryImages = [g1, g2, g3, g4, g5, g6];
 
+function Logo({ className = "h-10 w-10" }: { className?: string }) {
+  return (
+    <img
+      src={logoAsset.url}
+      alt="Beauty Nails Αργυρούπολη logo"
+      className={`${className} rounded-full object-cover`}
+    />
+  );
+}
+
 function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -65,10 +79,13 @@ function Home() {
 
       {/* NAV */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
-          <a href="#top" className="flex items-baseline gap-2">
-            <span className="font-display text-2xl tracking-wide text-foreground">Luxury</span>
-            <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
+          <a href="#top" className="flex items-center gap-3">
+            <Logo className="h-11 w-11" />
+            <div className="flex items-baseline gap-2">
+              <span className="font-display text-2xl tracking-wide text-foreground">Beauty</span>
+              <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
+            </div>
           </a>
           <nav className="hidden items-center gap-10 text-sm tracking-[0.18em] uppercase text-muted-foreground lg:flex">
             <a href="#services" className="transition-colors hover:text-rose-gold">Υπηρεσίες</a>
@@ -76,11 +93,6 @@ function Home() {
             <a href="#about" className="transition-colors hover:text-rose-gold">Για Εμάς</a>
             <a href="#contact" className="transition-colors hover:text-rose-gold">Επικοινωνία</a>
           </nav>
-          <a href="#booking">
-            <Button className="rounded-none bg-foreground px-6 text-xs uppercase tracking-[0.25em] text-background hover:bg-rose-gold">
-              Ραντεβού
-            </Button>
-          </a>
         </div>
       </header>
 
@@ -88,7 +100,7 @@ function Home() {
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
         <img
           src={heroBg}
-          alt="Luxury nail salon background"
+          alt="Beauty Nails salon background"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -96,27 +108,17 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-ivory/85 via-ivory/55 to-transparent" />
         <div className="relative mx-auto w-full max-w-7xl px-6 py-32 lg:px-12">
           <div className="max-w-2xl animate-[fade-in_1s_ease-out]">
-            <span className="divider-gold mb-8">Athens · Est. 2020</span>
+            <span className="divider-gold mb-8">Αργυρούπολη · Beauty Nail Salon</span>
             <h1 className="font-display text-5xl leading-[1.05] text-foreground sm:text-7xl lg:text-[5.5rem]">
               Η <span className="italic text-gradient-gold">Τέχνη</span>
               <br />
               στα Νύχια σου
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Επαγγελματική φροντίδα νυχιών με αγάπη και μεράκι. Στην καρδιά της Αθήνας,
-              ένας χώρος αφιερωμένος στην ομορφιά και την πολυτέλεια.
+              Επαγγελματική φροντίδα νυχιών και αισθητικής με αγάπη και μεράκι.
+              Στην καρδιά της Αργυρούπολης, ένας χώρος αφιερωμένος στην ομορφιά και την περιποίηση.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-6">
-              <a href="#booking">
-                <Button
-                  size="lg"
-                  className="group rounded-none bg-foreground px-10 py-7 text-xs uppercase tracking-[0.3em] text-background shadow-luxe transition-all hover:bg-rose-gold"
-                >
-                  <CalendarIcon className="mr-3 h-4 w-4" />
-                  Online Κράτηση
-                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </a>
               <a href="#services" className="text-xs uppercase tracking-[0.3em] text-foreground story-link">
                 Δείτε τις υπηρεσίες
               </a>
@@ -130,8 +132,8 @@ function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 divide-border md:grid-cols-3 md:divide-x">
           {[
             { icon: Heart, title: "500+", sub: "Ευχαριστημένες Πελάτισσες" },
-            { icon: Award, title: "5 Χρόνια", sub: "Εμπειρίας & Αφοσίωσης" },
-            { icon: Sparkles, title: "Premium", sub: "Υλικά Υψηλής Ποιότητας" },
+            { icon: Award, title: "Premium", sub: "Υλικά Υψηλής Ποιότητας" },
+            { icon: Sparkles, title: "Αισθητική", sub: "Νύχια, Βλεφαρίδες & Φρύδια" },
           ].map((b) => (
             <div key={b.sub} className="flex items-center gap-5 px-8 py-10 lg:px-12">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-rose-gold/40 text-rose-gold">
@@ -163,19 +165,10 @@ function Home() {
                 className="group relative bg-card p-10 transition-all duration-500 hover:bg-blush/40"
               >
                 <div className="mb-8 text-xs uppercase tracking-[0.3em] text-rose-gold">
-                  0{i + 1}
+                  {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="font-display text-3xl text-foreground">{s.name}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground">{s.desc}</p>
-                <div className="mt-10 flex items-end justify-between border-t border-border pt-6">
-                  <span className="font-display text-xl italic text-rose-gold">{s.price}</span>
-                  <a
-                    href="#booking"
-                    className="text-xs uppercase tracking-[0.25em] text-foreground transition-colors group-hover:text-rose-gold"
-                  >
-                    Κράτηση →
-                  </a>
-                </div>
               </div>
             ))}
           </div>
@@ -230,30 +223,27 @@ function Home() {
           <div className="relative">
             <img
               src={aboutImg}
-              alt="Luxury Nails Studio interior"
+              alt="Beauty Nails Αργυρούπολη χώρος"
               width={1200}
               height={1400}
               loading="lazy"
               className="aspect-[4/5] w-full object-cover shadow-luxe"
             />
             <div className="absolute -bottom-8 -right-8 hidden h-40 w-40 border border-rose-gold/40 bg-blush/40 backdrop-blur lg:flex items-center justify-center text-center p-4">
-              <div>
-                <div className="font-display text-4xl text-rose-gold">5+</div>
-                <div className="mt-1 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                  Χρόνια Αγάπης
-                </div>
-              </div>
+              <Logo className="h-24 w-24" />
             </div>
           </div>
           <div>
-            <span className="divider-gold">Για Εμάς</span>
+            <span className="divider-gold">Ποιοι Είμαστε</span>
             <h2 className="mt-6 text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              Κάθε γυναίκα αξίζει <span className="italic text-gradient-gold">να νιώθει όμορφη</span>
+              Μια μικρή <span className="italic text-gradient-gold">πολυτέλεια</span> που αξίζετε
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-              Στο Luxury Nails Studio πιστεύουμε ότι κάθε γυναίκα αξίζει να νιώθει όμορφη.
-              Χρησιμοποιούμε αποκλειστικά premium υλικά και τεχνικές για να σας προσφέρουμε
-              το καλύτερο αποτέλεσμα.
+              Στο Beauty Nail Salon Αργυρούπολη πιστεύουμε ότι η περιποίηση είναι μια μικρή
+              πολυτέλεια που αξίζει κάθε γυναίκα. Με επαγγελματισμό, υψηλά πρότυπα υγιεινής και
+              αγάπη για την ομορφιά, προσφέρουμε υπηρεσίες νυχιών και αισθητικής που αναδεικνύουν
+              το προσωπικό σας στυλ. Στόχος μας είναι κάθε επίσκεψη να αποτελεί μια ευχάριστη
+              εμπειρία χαλάρωσης και φροντίδας, σε έναν σύγχρονο και φιλόξενο χώρο.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-8 border-t border-border pt-10">
               <div>
@@ -313,35 +303,6 @@ function Home() {
         </div>
       </section>
 
-      {/* BOOKING */}
-      <section id="booking" className="relative overflow-hidden bg-background py-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-blush/20 to-background" />
-        <div className="relative mx-auto max-w-4xl px-6 lg:px-12">
-          <div className="mb-16 text-center">
-            <span className="divider-gold">Online Κράτηση</span>
-            <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
-              Κλείστε το <span className="italic text-gradient-gold">ραντεβού σας</span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-lg text-muted-foreground">
-              Κλείστε άμεσα το ραντεβού σας online μέσω του επαγγελματικού συστήματος κρατήσεών μας.
-            </p>
-          </div>
-
-          <div className="bg-card p-2 shadow-luxe sm:p-4">
-            <iframe
-              src="https://nexusnkz9.setmore.com"
-              title="Setmore Online Booking"
-              className="w-full border-0"
-              style={{ height: "700px" }}
-              loading="lazy"
-            />
-          </div>
-          <p className="mt-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            Powered by Setmore · Ασφαλής & Γρήγορη Κράτηση
-          </p>
-        </div>
-      </section>
-
       {/* HOURS + CONTACT */}
       <section id="contact" className="bg-background py-32">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-12">
@@ -382,12 +343,12 @@ function Home() {
                   </div>
                 </div>
               </a>
-              <a href="mailto:hello@luxurynails.gr" className="flex items-start gap-4 group">
+              <a href="mailto:hello@beautynails.gr" className="flex items-start gap-4 group">
                 <Mail className="mt-1 h-5 w-5 text-rose-gold" strokeWidth={1.5} />
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</div>
                   <div className="mt-1 text-lg text-foreground group-hover:text-rose-gold transition-colors">
-                    hello@luxurynails.gr
+                    hello@beautynails.gr
                   </div>
                 </div>
               </a>
@@ -396,7 +357,7 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Διεύθυνση</div>
                   <div className="mt-1 text-lg text-foreground">
-                    Σκουφά 42, Κολωνάκι<br />Αθήνα 106 73
+                    Αργυρούπολη<br />Αθήνα
                   </div>
                 </div>
               </div>
@@ -404,8 +365,8 @@ function Home() {
 
             <div className="mt-10 aspect-[16/10] w-full overflow-hidden border border-border shadow-soft">
               <iframe
-                title="Luxury Nails Studio location"
-                src="https://www.google.com/maps?q=Skoufa+42,+Athens,+Greece&output=embed"
+                title="Beauty Nails Αργυρούπολη location"
+                src="https://www.google.com/maps?q=Argyroupoli,+Athens,+Greece&output=embed"
                 className="h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -419,12 +380,15 @@ function Home() {
       <footer className="border-t border-border bg-card py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col items-center justify-between gap-10 md:flex-row">
-            <div className="text-center md:text-left">
-              <div className="flex items-baseline justify-center gap-2 md:justify-start">
-                <span className="font-display text-2xl text-foreground">Luxury</span>
-                <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
+            <div className="flex items-center gap-4 text-center md:text-left">
+              <Logo className="h-14 w-14" />
+              <div>
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-2xl text-foreground">Beauty</span>
+                  <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
+                </div>
+                <p className="mt-1 text-sm text-muted-foreground">Αργυρούπολη</p>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground">Studio · Αθήνα</p>
             </div>
 
             <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:flex-row md:gap-8">
@@ -453,7 +417,7 @@ function Home() {
           </div>
 
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs uppercase tracking-[0.2em] text-muted-foreground md:flex-row">
-            <span>© {new Date().getFullYear()} Luxury Nails Studio</span>
+            <span>© {new Date().getFullYear()} Beauty Nails Αργυρούπολη</span>
             <span>
               Designed by <span className="text-rose-gold">Nexus Media</span>
             </span>
