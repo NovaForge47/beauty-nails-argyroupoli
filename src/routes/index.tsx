@@ -124,7 +124,23 @@ function Home() {
               Επαγγελματική φροντίδα νυχιών και αισθητικής με αγάπη και μεράκι.
               Στην καρδιά της Αργυρούπολης, ένας χώρος αφιερωμένος στην ομορφιά και την περιποίηση.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-medium text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1ebe57]"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                Επικοινωνήστε μαζί μας
+              </a>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center gap-3 rounded-full border border-rose-gold/60 px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-rose-gold hover:text-primary-foreground"
+              >
+                <Phone className="h-4 w-4" strokeWidth={1.5} />
+                {PHONE_DISPLAY}
+              </a>
               <a href="#services" className="text-xs uppercase tracking-[0.3em] text-foreground story-link">
                 Δείτε τις υπηρεσίες
               </a>
