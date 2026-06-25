@@ -28,6 +28,17 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 import heroBg from "@/assets/hero-bg.jpg";
 
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
+import space1 from "@/assets/space-1.jpg.asset.json";
+import space2 from "@/assets/space-2.png.asset.json";
+import space3 from "@/assets/space-3.jpg.asset.json";
+import space4 from "@/assets/space-4.png.asset.json";
+
+const spacePhotos = [
+  { src: space4.url, alt: "Σταθμοί μανικιούρ Beauty Nails" },
+  { src: space2.url, alt: "Χώρος pedicure Beauty Nails" },
+  { src: space1.url, alt: "Καθίσματα pedicure" },
+  { src: space3.url, alt: "Χώρος αναμονής & pedicure" },
+];
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -197,6 +208,30 @@ function Home() {
         </div>
       </section>
 
+
+      {/* OUR SPACE */}
+      <section id="space" className="bg-secondary/30 py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mb-16 text-center">
+            <span className="divider-gold">Ο χώρος μας</span>
+            <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
+              Ο <span className="italic text-gradient-gold">χώρος</span> μας
+            </h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {spacePhotos.map((p) => (
+              <div key={p.src} className="overflow-hidden rounded-sm shadow-soft">
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  loading="lazy"
+                  className="h-80 w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section id="about" className="bg-background py-32">
