@@ -131,6 +131,7 @@ function Home() {
             <div className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-wide text-foreground">Beauty</span>
               <span className="font-display text-2xl italic text-gradient-gold">Nails</span>
+              <span className="font-display text-2xl tracking-wide text-foreground">Αργυρούπολη</span>
             </div>
           </a>
           <nav className="hidden items-center gap-10 text-sm tracking-[0.18em] uppercase text-muted-foreground lg:flex">
