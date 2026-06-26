@@ -28,10 +28,10 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 import heroBg from "@/assets/hero-bg.jpg";
 
 import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
-import space1 from "@/assets/space-1.jpg.asset.json";
-import space2 from "@/assets/space-2.png.asset.json";
-import space3 from "@/assets/space-3.jpg.asset.json";
-import space4 from "@/assets/space-4.png.asset.json";
+import space1 from "@/assets/space-new-1.jpg.asset.json";
+import space2 from "@/assets/space-new-2.jpg.asset.json";
+import space3 from "@/assets/space-new-3.png.asset.json";
+import space4 from "@/assets/space-new-4.jpg.asset.json";
 import work1 from "@/assets/work-1.jpg.asset.json";
 import work2 from "@/assets/work-2.jpg.asset.json";
 import work3 from "@/assets/work-3.jpg.asset.json";
