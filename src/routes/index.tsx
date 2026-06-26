@@ -38,6 +38,12 @@ import work3 from "@/assets/work-3.jpg.asset.json";
 import work4 from "@/assets/work-4.jpg.asset.json";
 import work5 from "@/assets/work-5.jpg.asset.json";
 import work6 from "@/assets/work-6.jpg.asset.json";
+import work7 from "@/assets/work-7.jpg.asset.json";
+import work8 from "@/assets/work-8.jpg.asset.json";
+import work9 from "@/assets/work-9.jpg.asset.json";
+import work10 from "@/assets/work-10.jpg.asset.json";
+import work11 from "@/assets/work-11.jpg.asset.json";
+import work12 from "@/assets/work-12.jpg.asset.json";
 
 const spacePhotos = [
   { src: space4.url, alt: "Σταθμοί μανικιούρ Beauty Nails" },
@@ -54,6 +60,12 @@ const workPhotos = [
   { src: work4.url, alt: "Πολύχρωμο nail art με σχέδια" },
   { src: work5.url, alt: "Stiletto nails σε nude απόχρωση" },
   { src: work6.url, alt: "Γαλλικό κίτρινο με 3D floral nail art" },
+  { src: work7.url, alt: "Stiletto nude μανικιούρ" },
+  { src: work8.url, alt: "Almond nails με chrome silver tips" },
+  { src: work9.url, alt: "Baby boomer ombre μανικιούρ" },
+  { src: work10.url, alt: "Γαλλικό ροζ με κίτρινο pedicure" },
+  { src: work11.url, alt: "Λευκό γαλλικό με μαύρη γραμμή" },
+  { src: work12.url, alt: "Κλασικό ροζ γαλλικό μανικιούρ" },
 ];
 
 
