@@ -243,7 +243,7 @@ function Home() {
       <section id="space" className="bg-secondary/30 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-16 text-center">
-            <span className="divider-gold">Ο χώρος μας</span>
+            <span className="divider-gold">Nail Salon Argyroupoli</span>
             <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
               Ο <span className="italic text-gradient-gold">χώρος</span> μας
             </h2>
