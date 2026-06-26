@@ -54,10 +54,8 @@ const spacePhotos = [
 ];
 
 const workPhotos = [
-  { src: work1.url, alt: "Γαλλικό μανικιούρ με μπλε floral design" },
   { src: work2.url, alt: "Γαλλικό μανικιούρ με μαύρη λεπτομέρεια" },
   { src: work3.url, alt: "Γαλλικό μανικιούρ σε πορτοκαλί απόχρωση" },
-  { src: work4.url, alt: "Πολύχρωμο nail art με σχέδια" },
   { src: work5.url, alt: "Stiletto nails σε nude απόχρωση" },
   { src: work6.url, alt: "Γαλλικό κίτρινο με 3D floral nail art" },
   { src: work7.url, alt: "Stiletto nude μανικιούρ" },
