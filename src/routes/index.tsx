@@ -245,7 +245,7 @@ function Home() {
           <div className="mb-16 text-center">
             <span className="divider-gold">Nail Salon Argyroupoli</span>
             <h2 className="mx-auto mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              Ο <span className="italic text-gradient-gold">χώρος</span> μας
+              Nail Salon <span className="italic text-gradient-gold">Argyroupoli</span>
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
