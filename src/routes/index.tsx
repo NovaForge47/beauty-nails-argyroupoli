@@ -194,7 +194,7 @@ function Home() {
       <section className="border-y border-border/60 bg-card">
         <div className="mx-auto grid max-w-7xl grid-cols-1 divide-border md:grid-cols-3 md:divide-x">
           {[
-            { icon: Heart, title: "500+", sub: "Ευχαριστημένες Πελάτισσες" },
+            { icon: Heart, title: "5 Χρόνια", sub: "Αφοσίωσης στην Ομορφιά" },
             { icon: Award, title: "Premium", sub: "Υλικά Υψηλής Ποιότητας" },
             { icon: Sparkles, title: "Αισθητική", sub: "Νύχια, Βλεφαρίδες & Φρύδια" },
           ].map((b) => (
