@@ -27,41 +27,41 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 
 import heroBg from "@/assets/hero-bg.jpg";
 
-import logoAsset from "@/assets/beauty-nails-logo.jpg.asset.json";
-import space1 from "@/assets/space-new-1.jpg.asset.json";
-import space2 from "@/assets/space-new-2.jpg.asset.json";
-import space3 from "@/assets/space-new-3.png.asset.json";
-import space4 from "@/assets/space-new-4.jpg.asset.json";
-import work2 from "@/assets/work-2.jpg.asset.json";
-import work3 from "@/assets/work-3.jpg.asset.json";
-import work5 from "@/assets/work-5.jpg.asset.json";
-import work6 from "@/assets/work-6.jpg.asset.json";
-import work7 from "@/assets/work-7.jpg.asset.json";
-import work8 from "@/assets/work-8.jpg.asset.json";
-import work9 from "@/assets/work-9.jpg.asset.json";
-import work10 from "@/assets/work-10.jpg.asset.json";
-import work11 from "@/assets/work-11.jpg.asset.json";
-import work12 from "@/assets/work-12.jpg.asset.json";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const spacePhotos = [
-  { src: space4.url, alt: "Σταθμοί μανικιούρ Beauty Nails" },
-  { src: space2.url, alt: "Χώρος pedicure Beauty Nails" },
-  { src: space1.url, alt: "Καθίσματα pedicure" },
-  { src: space3.url, alt: "Χώρος αναμονής & pedicure" },
+  { src: "/images/space-new-4.jpg", alt: "Σταθμοί μανικιούρ Beauty Nails" },
+  { src: "/images/space-new-2.jpg", alt: "Χώρος pedicure Beauty Nails" },
+  { src: "/images/space-new-1.jpg", alt: "Καθίσματα pedicure" },
+  { src: "/images/space-new-3.png", alt: "Χώρος αναμονής & pedicure" },
 
 ];
 
 const workPhotos = [
-  { src: work2.url, alt: "Γαλλικό μανικιούρ με μαύρη λεπτομέρεια" },
-  { src: work3.url, alt: "Γαλλικό μανικιούρ σε πορτοκαλί απόχρωση" },
-  { src: work5.url, alt: "Stiletto nails σε nude απόχρωση" },
-  { src: work6.url, alt: "Γαλλικό κίτρινο με 3D floral nail art" },
-  { src: work7.url, alt: "Stiletto nude μανικιούρ" },
-  { src: work8.url, alt: "Almond nails με chrome silver tips" },
-  { src: work9.url, alt: "Baby boomer ombre μανικιούρ" },
-  { src: work10.url, alt: "Γαλλικό ροζ με κίτρινο pedicure" },
-  { src: work11.url, alt: "Λευκό γαλλικό με μαύρη γραμμή" },
-  { src: work12.url, alt: "Κλασικό ροζ γαλλικό μανικιούρ" },
+  { src: "/images/work-2.jpg", alt: "Γαλλικό μανικιούρ με μαύρη λεπτομέρεια" },
+  { src: "/images/work-3.jpg", alt: "Γαλλικό μανικιούρ σε πορτοκαλί απόχρωση" },
+  { src: "/images/work-5.jpg", alt: "Stiletto nails σε nude απόχρωση" },
+  { src: "/images/work-6.jpg", alt: "Γαλλικό κίτρινο με 3D floral nail art" },
+  { src: "/images/work-7.jpg", alt: "Stiletto nude μανικιούρ" },
+  { src: "/images/work-8.jpg", alt: "Almond nails με chrome silver tips" },
+  { src: "/images/work-9.jpg", alt: "Baby boomer ombre μανικιούρ" },
+  { src: "/images/work-10.jpg", alt: "Γαλλικό ροζ με κίτρινο pedicure" },
+  { src: "/images/work-11.jpg", alt: "Λευκό γαλλικό με μαύρη γραμμή" },
+  { src: "/images/work-12.jpg", alt: "Κλασικό ροζ γαλλικό μανικιούρ" },
 ];
 
 
@@ -107,7 +107,7 @@ const testimonials = [
 function Logo({ className = "h-10 w-10" }: { className?: string }) {
   return (
     <img
-      src={logoAsset.url}
+      src={"/images/beauty-nails-logo.jpg"}
       alt="Beauty Nails Αργυρούπολη logo"
       className={`${className} rounded-full object-cover`}
     />

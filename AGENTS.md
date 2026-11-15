@@ -11,3 +11,7 @@ When a user dictates an ID that contains both `0`/`O` or `1`/`l`, confirm the ex
 ## Verifying analytics actually collects
 
 HTML containing the tag is not proof. Load the live site in a real browser and confirm a `POST` to `google-analytics.com/g/collect` carrying the expected `tid`, then publish and have the client check GA4 Realtime.
+
+## Portable image hosting
+
+Keep migrated salon images as ordinary files in `public/images` and reference them with root-relative `/images/` paths so image hosting remains portable.
